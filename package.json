@@ -1,0 +1,39 @@
+{
+  "name": "foodyz",
+  "version": "1.0.0",
+  "description": "FoodyZ",
+  "scripts": {
+    "start": "parcel index.html",
+    "comments": "// Replace 'index.html' with your entry point",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mridul20-03/FoodyZ.git"
+  },
+  "author": "Mridul Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mridul20-03/FoodyZ/issues"
+  },
+  "homepage": "https://github.com/Mridul20-03/FoodyZ#readme",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.1",
+    "@parcel/transformer-webmanifest": "^2.10.1",
+    "parcel": "^2.10.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "formik": "^2.4.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.17.0",
+    "yup": "^1.3.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
+}
