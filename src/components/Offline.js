@@ -3,6 +3,7 @@ import offlineImg from "../static/offline_Image.jpg";
 
 const Offline = () => {
     return (
+        <div className="restaurant-menu">
         <div className="user-offline-container">
             <h1 className="user-offline-heading">
                 Offline
@@ -11,6 +12,7 @@ const Offline = () => {
             <p className="user-offline-message">
             😢 offline, Please check your internet connection
             </p>
+        </div>
         </div>
     );
 };
