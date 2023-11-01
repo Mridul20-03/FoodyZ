@@ -5,6 +5,10 @@ import userAuthentication from "../helperHooks/useAuthentication.js";
 import useLocalStorage from '../helperHooks/useLocalStorage.js';
 import Logo from "../static/FoodyZ.png";
  
+//Subscribing our store
+import { useSelector } from "react-redux";
+
+
 export const Title = () => (
     <Link to="/">
       <img className ="logo" src={Logo} alt="FoodyZ" title='FoodyZ'/>
@@ -22,6 +26,13 @@ export const Title = () => (
     const navigate = useNavigate();
 
     const [getLocal, ,clearLocalStorage] = useLocalStorage("user");
+
+    //subscribe to our store
+    const cartItems = useSelector((store) => store.cart.items);
+
+
+
+
 
     //console.log(getLocal);
     
@@ -50,7 +61,11 @@ export const Title = () => (
             
             <li> <Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-
+            <li>
+              <Link to="/cart">
+            <i className="fa-solid fa-cart-shopping"> - {cartItems.length}</i>
+            </Link>
+            </li>
 
             <li>
               {isLoggedIn ? (
