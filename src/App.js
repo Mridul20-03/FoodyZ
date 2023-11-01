@@ -13,18 +13,24 @@ import Contact from "./components/Contact";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Login from "./components/Login.js";
 import Shimmer from "./components/ShimmerUI.js";
+import Cart from "./components/Cart.js";
+
+
+import { Provider } from "react-redux";
+import store from "./utils/store.js";
+
 
 //LAZY IMPORT
 const Instamart = lazy(() => import("./components/instamart.js"));
 //upon loading => react-renders => suspends the load
 
 const AppLayout = () => (
-  <>
+  <Provider store={store}> 
     <Header />
     { /* Outlet is present here */}
       <Outlet />
     <Footer />
-  </>
+  </Provider>
 );
 
 //WE have to create a routing configuration
@@ -55,7 +61,12 @@ const appRouter = createBrowserRouter([
       {
         path: "/restuarant/:id",
         element: <RestaurantDetails />,  
-      },/*{
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      /*{
         path: "/instamart",
         element: <Suspense fallback={<Shimmer/>}><Instamart /></Suspense>,
         errorElement: <ErrorElement/>,  
