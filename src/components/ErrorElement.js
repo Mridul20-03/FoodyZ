@@ -8,6 +8,8 @@ const ErrorElement = () => {
 
 
     return (
+        <div className="restaurant-menu">
+    
         <div className="error-page">
             <img src={ErrorImg} alt="error"/>
             <h1>Oops!!</h1>
@@ -16,6 +18,7 @@ const ErrorElement = () => {
             <h3 className="error-back-home">
                 <Link to="/">Home</Link>
             </h3>
+        </div>
         </div>
     );
 };
