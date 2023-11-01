@@ -7,7 +7,7 @@ import { filterData } from "../utils/helper.js";
 import useRestaurantsList from "../helperHooks/useRestaurantList.js";
 import useOnline from "../helperHooks/useOnline.js"
 import Offline from "./Offline.js";
-
+import EmptyRestaurant from "./EmptyRestaurant.js";
 
 //import restaurantList from "./config.js";
 
@@ -47,7 +47,7 @@ const Body = () => {
   //early return - Not render anything
   if (!allRestaurants){
     console.log("EARLY RETURNED");
-    return null;
+    return <EmptyRestaurant/>;
   }
 
   //if(filteredRestaurants?.length === 0)
