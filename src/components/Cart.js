@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem, clearCart } from "../utils/cartSlice.js";
-import FoodItem from "./FoodItem.js";
+//import FoodItem from "./FoodItem.js";
 import { MENU_ITEM_IMG_CDN_URL } from "./config.js";
 const Cart = () => {
   const dispatch = useDispatch();
