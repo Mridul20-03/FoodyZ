@@ -7,6 +7,7 @@ import SocialMedia from "./SocialMedia";
 
 const AboutUs = () => {
   return (
+    <div className="restaurant-menu">
     <div className="about-container-main">
         <div className="about-container">
           <div className="about-left">
@@ -25,6 +26,7 @@ const AboutUs = () => {
         </div>
 
 
+    </div>
     </div>
     </div>
   );
