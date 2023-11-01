@@ -9,10 +9,28 @@ import useRestaurantInfo
  import useOnline from "../helperHooks/useOnline"; 
  import Offline from "./Offline.js";
 
+
+ import { addItem } from "../utils/cartSlice.js";
+ import { useDispatch } from "react-redux";
+
+
+
+
+
+
 const RestaurantDetails = () => {
   //helps to read the Dynamic Url 
   const { id } = useParams();
   
+
+  const dispatch = useDispatch();
+  const addFoodItem = (item) => {
+    dispatch(addItem(item));
+  }
+
+
+
+
   const onlineOrNot = useOnline();
   if(!onlineOrNot)
   {
@@ -84,7 +102,9 @@ const RestaurantDetails = () => {
                       alt={item?.name}
                     />
                   )}
-                  <button className="add-btn"> ADD +</button>
+                  <button className="add-btn" onClick={() => {
+                    addFoodItem(item);
+                  }}> ADD +</button>
                 </div>
               </div>
             ))}
